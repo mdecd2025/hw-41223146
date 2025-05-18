@@ -16,7 +16,25 @@
 <h1>List</h1>
 <p><a href="https://mdecd2025.github.io/hw-41223146/content/Brython.html?src=https://gist.githubusercontent.com/41223146/eb32d38678ba1ec5ff2bc11170d9ccc4/raw/c029d7011a1b5649ab73d43e935d239ba82d1b20/2a-g9">2a-g9</a></p>
 <h1>上課內容</h1>
-<h2>w3</h2><h1>Homework</h1>
+<h2>w3</h2>
+<p><span>列出各班未納入分組名單的名單</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 甲班學員資料處理
+url = "https://mde.tw/list/2a.txt"
+data = open(url).readlines()
+all_stud = data[1:]
+a_all_members = ['41223154', '41271125', '41271158', '41271146', '41271131', 'CYG41223103', '41223102', '41023128', '41023137', '41223137', '41223157', '41223156', 'otakuyoyo', '41223141', '41223113', 'kim41223114', 'joeisme1208', '41223116', '41223144', '41223140', '41223143', '41223138', '41223134', '41223136', 'zhe41223118', 'Spirit0224', 'yuhao-08', '41223158', 'Ren911308', '41223150', 'Manto8', 'CYA41223106', 'yan21ed', 'Lin41223107', '41223133', 'hong41223129', '41223110', '41223147', 'Linjiahong41223125', 'CHN41223132', 'Yu-Fang-Hong', '41023111', 'yckaooooo', 'kolas911205', '41023105', '40932134', '41223104', 'yan41223101', '41223105', '41223153', '41223120', '41223152', 'G8People', 'WSE41223112', '41223146', '41223119']
+   
+# 顯示甲班標題
+print("甲班:")
+for i in all_stud:
+    drop_n = i.rstrip("\n")
+    stud = drop_n.split("\t")
+    stud_num = stud[0]
+    stud_github = stud[1]
+    if stud_github not in a_all_members:
+        print(stud_num)</pre>
+<p><a href="https://mdecd2025.github.io/2a-ag4/content/Brython.html?src=https://gist.githubusercontent.com/zhe41223118/fcdf65c3206155c5cd56140e47c6c87d/raw/8a5262e66228212fbc4f862ceaf67c798c9fb54c/2a-1">列出2a還未納入的學員名單</a></p>
+<p></p><h1>Homework</h1>
 <p>作業 (30%)</p>
 <p>HW1 (5%): <span style="background-color: #ffff00;">建立由 Box 組成的平面四連桿機構 Webots 模擬場景</span></p>
 <p style="padding-left: 30px;">part1:</p>
